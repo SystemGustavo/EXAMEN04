@@ -34,10 +34,7 @@
             btnActualizar = new Button();
             btnEliminar = new Button();
             label1 = new Label();
-            label2 = new Label();
             label3 = new Label();
-            rbSi = new RadioButton();
-            rbNo = new RadioButton();
             txtRegionID = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvRegion).BeginInit();
             SuspendLayout();
@@ -56,7 +53,7 @@
             dgvRegion.Name = "dgvRegion";
             dgvRegion.RowHeadersWidth = 51;
             dgvRegion.RowTemplate.Height = 29;
-            dgvRegion.Size = new Size(649, 298);
+            dgvRegion.Size = new Size(621, 298);
             dgvRegion.TabIndex = 2;
             dgvRegion.CellDoubleClick += dgvRegion_CellDoubleClick;
             // 
@@ -99,15 +96,6 @@
             label1.TabIndex = 6;
             label1.Text = "Region Name :";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(99, 101);
-            label2.Name = "label2";
-            label2.Size = new Size(70, 20);
-            label2.TabIndex = 7;
-            label2.Text = "Enabled :";
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -116,28 +104,6 @@
             label3.Size = new Size(71, 20);
             label3.TabIndex = 8;
             label3.Text = "RegionID";
-            // 
-            // rbSi
-            // 
-            rbSi.AutoSize = true;
-            rbSi.Location = new Point(221, 101);
-            rbSi.Name = "rbSi";
-            rbSi.Size = new Size(42, 24);
-            rbSi.TabIndex = 9;
-            rbSi.TabStop = true;
-            rbSi.Text = "Si";
-            rbSi.UseVisualStyleBackColor = true;
-            // 
-            // rbNo
-            // 
-            rbNo.AutoSize = true;
-            rbNo.Location = new Point(295, 101);
-            rbNo.Name = "rbNo";
-            rbNo.Size = new Size(50, 24);
-            rbNo.TabIndex = 10;
-            rbNo.TabStop = true;
-            rbNo.Text = "No";
-            rbNo.UseVisualStyleBackColor = true;
             // 
             // txtRegionID
             // 
@@ -153,10 +119,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(txtRegionID);
-            Controls.Add(rbNo);
-            Controls.Add(rbSi);
             Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnEliminar);
             Controls.Add(btnActualizar);
@@ -179,10 +142,7 @@
         private Button btnActualizar;
         private Button btnEliminar;
         private Label label1;
-        private Label label2;
         private Label label3;
-        private RadioButton rbSi;
-        private RadioButton rbNo;
         private TextBox txtRegionID;
     }
 }

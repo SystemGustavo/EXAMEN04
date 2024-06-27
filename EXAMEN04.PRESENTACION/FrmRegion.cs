@@ -33,14 +33,7 @@ namespace EXAMEN04.PRESENTACION
                 NRegion objNRegion = new NRegion();
                 ERegion region = new ERegion();
                 region.RegionName = txtRegionName.Text;
-                if (rbSi.Checked)
-                {
-                    region.Enabled = true;
-                }
-                if (rbNo.Checked)
-                {
-                    region.Enabled = false;
-                }
+                region.Enabled = true;
                 objNRegion.Registrar(region);
                 MessageBox.Show("Registro Exitoso");
                 dgvRegion.DataSource = objNRegion.ListarRegiones();
@@ -62,14 +55,7 @@ namespace EXAMEN04.PRESENTACION
                 ERegion region = new ERegion();
                 region.RegionId = Convert.ToInt32(txtRegionID.Text);
                 region.RegionName = txtRegionName.Text;
-                if (rbSi.Checked)
-                {
-                    region.Enabled = true;
-                }
-                if (rbNo.Checked)
-                {
-                    region.Enabled = false;
-                }
+                region.Enabled=true;
                 objNRegion.Actualizar(region);
                 MessageBox.Show("Actualizacion Exitoso");
                 dgvRegion.DataSource = objNRegion.ListarRegiones();
@@ -107,24 +93,12 @@ namespace EXAMEN04.PRESENTACION
         {
             txtRegionID.Text = dgvRegion.CurrentRow.Cells[0].Value.ToString();
             txtRegionName.Text = dgvRegion.CurrentRow.Cells[1].Value.ToString();
-            bool Enabled = Convert.ToBoolean(dgvRegion.CurrentRow.Cells[2].Value);
-            if (Enabled == true) 
-            {
-                rbSi.Checked= true;
-            }
-            else
-            {
-                rbNo.Checked= false;
-            }
-           
         }
 
         public void Limpiar()
         {
             txtRegionID.Text = string.Empty;
             txtRegionName.Text = string.Empty;
-            rbNo.Checked = false;
-            rbSi.Checked = false;
         }
     }
 }
